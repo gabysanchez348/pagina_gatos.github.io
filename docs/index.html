@@ -1,0 +1,145 @@
+<!doctype html> 
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopta un amigo peludo</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="top">
+      <div class="brand">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div>
+          <h1>Adopta un amigo peludo</h1>
+          <p class="lead">Encuentra gatos rescatados, lee sus historias y dales una segunda oportunidad en un lugar lleno de cariño.</p>
+        </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button type="button" class="nav-btn" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">Adoptar Ahora</button>
+        <button type="button" class="nav-btn" onclick="document.getElementById('resources').scrollIntoView({behavior:'smooth'})">Consejos</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h2>Adopta un amigo peludo hoy</h2>
+      <p>Adopta un gato y descubre el amor incondicional que solo un peludo puede dar. Cada uno de nuestros gatos rescatados espera una segunda oportunidad y un hogar lleno de cariño. ¡Tu nuevo mejor amigo te está esperando! 🐾❤️</p>
+      <h2>Nuestra Misión</h2>
+      <p class="muted">En "Adopta un amigo peludo", trabajamos día a día para rescatar gatos en situación de abandono y maltrato, brindándoles atención médica y mucho amor. Nuestro objetivo es encontrarles hogares responsables donde puedan vivir felices y llenos de cariño.</p>
+    </div>
+    <aside class="hero-aside">
+      <img src="gatito.png" alt="Gato">
+    </aside>
+  </section>
+
+  <section class="section">
+    <h2>Gatos destacados</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="gatos/keiry.jpg" alt="Keiry">
+        <div class="meta">
+          <h3>Keiry <span class="tag">Bebé de 2 meses</span></h3>
+          <p>Hembra cariñosa, independiente y juguetona. Ideal para hogares tranquilos.</p>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="openAdopt('Keiry', 'gatos/keiry.jpg')">Adoptar gato!</button>
+            <button class="btn btn-secondary" onclick="verDetalles('Keiry')">Ver más detalles</button>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="gatos/tommy.jpeg" alt="Tommy">
+        <div class="meta">
+          <h3>Tommy <span class="tag">Adulto de 2 años</span></h3>
+          <p>Macho muy cariñoso pero enojón. Le encanta jugar y recibir cariño.</p>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="openAdopt('Tommy', 'gatos/tommy.jpeg')">Adoptar gato!</button>
+            <button class="btn btn-secondary" onclick="verDetalles('Tommy')">Ver más detalles</button>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="gatos/milo.jpeg" alt="Milo">
+        <div class="meta">
+          <h3>Milo <span class="tag">Adolescente de 7 meses</span></h3>
+          <p>Macho juguetón y curioso. Busca un hogar lleno de amor y aventuras.</p>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="openAdopt('Milo', 'gatos/milo.jpeg')">Adoptar gato!</button>
+            <button class="btn btn-secondary" onclick="verDetalles('Milo')">Ver más detalles</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <aside>
+        <div class="filters">
+          <h3>Filtrar Gatos</h3>
+          <div class="filter-buttons">
+            <button class="pill">Cachorro</button>
+            <button class="pill">Adolescente</button>
+            <button class="pill">Adulto</button>
+            <button class="pill">Senior</button>
+          </div>
+          <div class="filter-buttons">
+            <button class="pill">Macho</button>
+            <button class="pill">Hembra</button>
+          </div>
+        </div>
+      </aside>
+      <div class="catalog-container">
+        <h2>Catálogo rápido</h2>
+        <div id="catalog"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="section">
+    <h2>Consejos y Recursos</h2>
+    <div class="resources">
+      <article class="resource">
+        <h3>Cómo preparar tu hogar</h3>
+        <p>Asegúrate de tener lo esencial antes de traer a tu gato: rascador, comederos, caja de arena, juguetes y un espacio 
+        seguro para dormir. Esto ayuda a que tu gato se adapte rápido y se sienta seguro.</p>      
+      </article>
+
+      <article class="resource">
+        <h3>Alimentación adecuada</h3>
+        <p>Elige comida de buena calidad según la edad de tu gato: comida para cachorros, adultos o senior. Alterna comida seca y húmeda para una dieta balanceada y no olvides agua fresca siempre disponible.</p>
+      </article>
+
+      <article class="resource">
+        <h3>Visitas al veterinario</h3>
+        <p>Antes y después de la adopción, lleva a tu gato al veterinario para revisiones, vacunación y desparasitación. Esto asegura su salud y previene enfermedades.</p>
+      </article>
+
+      <article class="resource">
+        <h3>Socialización y cariño</h3>
+        <p>Pasa tiempo jugando y acariciando a tu gato. La socialización temprana y el cariño constante ayudan a que sea un gato confiado y feliz.</p>
+      </article>
+
+      <article class="resource">
+        <h3>Limpieza y mantenimiento</h3>
+        <p>Limpia regularmente la caja de arena y los comederos. Mantén la casa segura retirando objetos peligrosos y asegurando ventanas y balcones.</p>
+      </article>    
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho con ❤️ por refugios y voluntarios. |
+      Correo: <a href="mailto:centroadopciongatos@gmail.com">centroadopciongatos@gmail.com</a> | 
+      Teléfono: <a href="tel:+526645100610">664 510 0610</a> | 
+      Instagram: @adoptaunamigo_543 | 
+      Facebook: Adopta un amigo peludo
+    </p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
