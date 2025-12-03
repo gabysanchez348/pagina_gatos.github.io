@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Adopción | Adopta un amigo peludo</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="top">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Formulario de Adopción</h1>
+    </div>
+    <nav>
+      <button class="nav-btn volver" onclick="window.location.href='index.html'">🏠 Volver al inicio</button>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="card">
+      <div class="selected-cat" id="cat-info" style="display:none;">
+        <img id="cat-img" src="" alt="Gato seleccionado">
+        <div>
+          <h3 id="cat-name"></h3>
+          <p class="muted">Estás iniciando el proceso de adopción de este adorable peludo 🐾</p>
+        </div>
+      </div>
+      
+      <form action="guardar_formulario.php" method="POST">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" name="nombre" required>
+
+        <label for="direccion">Dirección</label>
+        <input id="direccion" type="text" name="direccion" required>
+
+        <div class="form-row">
+          <input type="tel" name="telefono" placeholder="Teléfono" required>
+          <input type="email" name="email" placeholder="Correo" required>
+        </div>
+
+        <label for="experiencia">¿Tienes experiencia con gatos?</label>
+        <select id="experiencia" name="experiencia">
+          <option value="">Selecciona...</option>
+          <option>Sí, tengo experiencia</option>
+          <option>No, soy primerizo</option>
+        </select>
+
+        <label for="otros">¿Tienes otros animales en casa?</label>
+        <select id="otros" name="otros">
+          <option value="">Selecciona...</option>
+          <option>Perros</option>
+          <option>Gatos</option>
+          <option>No tengo</option>
+        </select>
+
+        <label for="disponibilidad">¿Cuál es tu disponibilidad de tiempo?</label>
+        <input id="disponibilidad" type="text" name="disponibilidad" required>
+
+        <label for="mensaje">Mensaje / ¿Por qué quieres adoptar?</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+          <button type="reset" class="btn">Limpiar</button>
+        </div>
+        <p id="formMsg" class="muted"></p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<div class="modal" id="modal-success">
+  <div class="modal-content">¡Gracias por adoptar! 🐾</div>
+</div>
+
+<div id="confetti"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

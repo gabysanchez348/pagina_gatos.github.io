@@ -1,0 +1,371 @@
+:root {
+  --marron: #794f2e;
+  --naranja: #c0400d;
+  --ocre: #ffca8d;
+  --beige: #f1e0c5;
+  --texto: #241a13;
+  --blanco: #ffe4b9;
+  --sombra: #302219;
+  --titulos: #d86e18;
+  --botones: #ff941a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--texto);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 1rem;
+}
+
+header {
+  background: var(--blanco);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+  margin-bottom: 1.5rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+}
+
+h1 {
+  color: var(--naranja);
+  font-size: 1.8rem;
+}
+
+.nav-btn,
+.btn {
+  background: var(--marron);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  color: var(--blanco);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover,
+.btn:hover {
+  transform: scale(1.05);
+  background-color: var(--botones);
+}
+
+.btn-primary {
+  background: var(--marron);
+}
+
+.btn-secondary {
+  background: var(--ocre);
+  color: var(--texto);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.hero-card h2 {
+  color: var(--titulos);
+}
+
+.hero-aside img {
+  width: 65%;
+  border-radius: 1rem;
+}
+
+.section {
+  background: var(--blanco);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.section h2 {
+  color: var(--naranja);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--ocre);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.meta h3 {
+  margin: 0.5rem 0;
+  color: var(--naranja);
+}
+
+.tag {
+  background: var(--titulos);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--blanco);
+}
+
+.filters {
+  background: var(--blanco);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+  margin-bottom: 2rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  background: var(--titulos);
+  color: var(--blanco);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pill.active {
+  background: var(--marron);
+}
+
+.catalog-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: var(--ocre);
+  cursor: pointer;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.catalog-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, select, textarea {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ffffff;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--marron);
+  box-shadow: 0 0 6px var(--naranja);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.selected-cat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: var(--ocre);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.selected-cat img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.4);
+  z-index: 99;
+}
+
+.modal.active {
+  display: flex;
+  animation: fadeIn 0.5s;
+}
+
+.modal-content {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 10px var(--sombra);
+  animation: pop 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+.detalle-card {
+  display: flex;
+  gap: 2rem;
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+  flex-wrap: wrap;
+}
+
+.detalle-card img {
+  width: 250px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.detalle-card div {
+  flex: 1;
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0.9;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+footer a {
+  color: var(--marron);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-aside img {
+    display: none;
+  }
+  .detalle-card { flex-direction: column; text-align: center; }
+}
+
+.resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.resource {
+  background: var(--ocre);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.resource h3 {
+  color: var(--marron);
+  margin-bottom: 0.5rem;
+}
+
+.resource p {
+  font-size: 0.95rem;
+  color: var(--texto);
+  line-height: 1.4;
+}
